@@ -1,0 +1,25 @@
+# Python virtual environments & bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & secrets
+.env
+*.env.local
+
+# Databases & runtime session files
+*.db
+*.sqlite3
+
+# Vector DB & Search Caches (auto-regenerates from updated_data.csv)
+qdrant_db_schemes_v1/
+chunks_cache_schemes_v1.json
+bm25_schemes_index.pkl
+
+# Logs & temp files
+*.log
+scratch/
+.system_generated/

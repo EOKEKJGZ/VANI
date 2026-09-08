@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-font-size="md" data-high-contrast="false">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahakaar Sathi — VANI (Voice-enabled Assistance for National Inclusion)</title>
+  <meta name="description" content="AI-powered Multilingual Cooperative Governance, Legal Assistance & Citizen Welfare Platform for farmers, cooperative members, and rural citizens.">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232C3E63'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+</head>
+<body>
+
+  <!-- Top Utility Credit Bar (Tasteful Government Attribution) -->
+  <aside class="gov-credit-bar" aria-label="Government Attribution">
+    <div class="dept-line">
+      <i class="ti ti-building-bank"></i>
+      <span>Ministry of Cooperation &bull; <strong>National Council for Cooperative Training (NCCT)</strong></span>
+    </div>
+    <div class="sih-tag">
+      <span>SIH Problem Statement 26088 &bull; Tahsil Hub Tier</span>
+    </div>
+  </aside>
+
+  <!-- Platform Header -->
+  <header class="platform-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="brand-icon-box" aria-hidden="true">
+          <i class="ti ti-scale"></i>
+        </div>
+        <div class="brand-titles">
+          <h1 class="brand-title">Sahakaar Sathi</h1>
+          <span class="brand-subtitle">VANI &mdash; Voice-enabled Assistance for National Inclusion</span>
+        </div>
+      </div>
+
+      <!-- Accessibility & Controls -->
+      <div class="header-controls">
+        <!-- Book-Index Language Tabs -->
+        <nav class="language-tabs" aria-label="Language Selection">
+          <button class="lang-tab active" data-lang="en-IN" data-label="English">English</button>
+          <button class="lang-tab" data-lang="hi-IN" data-label="हिन्दी">हिन्दी</button>
+          <button class="lang-tab" data-lang="mr-IN" data-label="मराठी">मराठी</button>
+          <button class="lang-tab" data-lang="ta-IN" data-label="தமிழ்">தமிழ்</button>
+          <button class="lang-tab" data-lang="te-IN" data-label="తెలుగు">తెలుగు</button>
+          <button class="lang-tab" data-lang="bn-IN" data-label="বাংলা">বাংলা</button>
+        </nav>
+
+        <!-- Font Size Scaler (A- / A / A+) -->
+        <div class="font-resizer" aria-label="Text Size Adjustment">
+          <button class="font-btn" id="font-dec-btn" title="Decrease font size" aria-label="Decrease text size">A-</button>
+          <button class="font-btn active" id="font-def-btn" title="Default font size" aria-label="Default text size">A</button>
+          <button class="font-btn" id="font-inc-btn" title="Increase font size" aria-label="Increase text size">A+</button>
+        </div>
+
+        <!-- Scheme Explorer Drawer Button -->
+        <button class="control-btn" id="open-schemes-btn">
+          <i class="ti ti-folder-search"></i>
+          <span>Scheme Directory</span>
+        </button>
+
+        <!-- Clear Session Button -->
+        <button class="control-btn" id="clear-history-btn" title="Reset current session">
+          <i class="ti ti-rotate-clockwise"></i>
+          <span>New Session</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="main-layout">
+
+    <!-- Emergency 72-Hour Crop Loss Alert Banner (Dedicated Rust-Red) -->
+    <section class="emergency-banner" role="alert">
+      <div class="emergency-info">
+        <i class="ti ti-alert-triangle emergency-icon" aria-hidden="true"></i>
+        <div>
+          <h2 class="emergency-title">Heavy Rainfall, Flood or Natural Calamity Crop Damage?</h2>
+          <p class="emergency-desc">Intimate PMFBY / PACS within <strong>72 Hours</strong> for mandatory Joint Survey & insurance compensation.</p>
+        </div>
+      </div>
+      <button class="emergency-action-btn" id="emergency-crop-loss-btn">
+        <i class="ti ti-shield-check"></i>
+        <span>Report Crop Loss Guide</span>
+      </button>
+    </section>
+
+    <!-- Quick Category Action Tiles (Tabler Icons Set) -->
+    <section class="category-tiles-section" aria-label="Cooperative and Scheme Services">
+      <div class="section-label">
+        <i class="ti ti-grid-dots"></i>
+        <span>Direct Assistance Categories (3,400+ Verified Records)</span>
+      </div>
+      <div class="category-tiles-grid">
+        <button class="tile-card" data-prompt="There was a heavy rainfall yesterday all my crops are destroyed what should I do">
+          <i class="ti ti-seeding tile-icon"></i>
+          <span class="tile-title">Crop Loss & PMFBY</span>
+          <span class="tile-desc">Heavy rain compensation, 72-hr claim notice & survey guide</span>
+        </button>
+
+        <button class="tile-card" data-prompt="What are the laws and procedures to resolve a dispute in a Primary Agricultural Credit Society (PACS)?">
+          <i class="ti ti-scale tile-icon"></i>
+          <span class="tile-title">Cooperative Laws & PACS</span>
+          <span class="tile-desc">By-laws, member rights, elections & Registrar dispute resolution</span>
+        </button>
+
+        <button class="tile-card" data-prompt="How does Kisan Credit Card (KCC) protect farmers crop loans with insurance?">
+          <i class="ti ti-credit-card tile-icon"></i>
+          <span class="tile-title">KCC & Crop Loans</span>
+          <span class="tile-desc">Interest subvention, debt protection & credit society facilities</span>
+        </button>
+
+        <button class="tile-card" data-prompt="What are the top government subsidy schemes for small farmers and rural entrepreneurs?">
+          <i class="ti ti-file-text tile-icon"></i>
+          <span class="tile-title">Government Schemes</span>
+          <span class="tile-desc">Central & State subsidies, scholarships, toolkits & grants</span>
+        </button>
+
+        <button class="tile-card" data-prompt="How to file a formal grievance against cooperative society management with the District Registrar?">
+          <i class="ti ti-gavel tile-icon"></i>
+          <span class="tile-title">Grievance Redressal</span>
+          <span class="tile-desc">Legal steps, petition filing, deadlines & authority contacts</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Assistant Interaction Hub (Ledger Viewport) -->
+    <section class="assistant-hub" aria-label="Sahakaar Sathi Assistance Hub">
+      <div class="hub-header">
+        <div class="hub-title-box">
+          <i class="ti ti-messages" style="color: var(--indigo); font-size: 1.3rem;"></i>
+          <h2 class="hub-title">Cooperative & Citizen Assistance Ledger</h2>
+          <span class="hub-badge" id="scheme-stat-badge">
+            <i class="ti ti-database"></i> 3,400+ Schemes Indexed
+          </span>
+        </div>
+        <div class="hub-actions">
+          <span style="font-size: var(--font-size-xs); color: var(--text-muted);">
+            <i class="ti ti-volume"></i> Audio readout enabled
+          </span>
+        </div>
+      </div>
+
+      <!-- Ledger Row Stream -->
+      <div class="conversation-viewport" id="chat-stream">
+        <!-- Initial Welcome Ledger Row -->
+        <article class="ledger-row assistant-row">
+          <div class="row-card parsed-response">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid var(--brass-light); padding-bottom: 6px;">
+              <strong style="color: var(--indigo-dark); font-family: var(--font-serif); font-size: var(--font-size-base); display: flex; align-items: center; gap: 6px;">
+                <i class="ti ti-building-bank"></i> Sahakaar Sathi VANI
+              </strong>
+              <span class="verified-source-badge">
+                <i class="ti ti-shield-check"></i> Ministry of Cooperation &bull; NCCT Verified
+              </span>
+            </div>
+            <p><strong>Namaste!</strong> Welcome to <strong>Sahakaar Sathi</strong> &mdash; your official AI-powered Cooperative Governance, Legal Assistance & Citizen Welfare Advisor.</p>
+            <p>You can ask questions via <strong>Voice (Microphone)</strong> or <strong>Text</strong> in English, Hindi, and regional languages about:</p>
+            <ul>
+              <li><strong>Crop Loss & Disaster Relief:</strong> Pradhan Mantri Fasal Bima Yojana (PMFBY), heavy rainfall/flood compensation, and emergency 72-hour claim protocols.</li>
+              <li><strong>Cooperative Society By-laws:</strong> PACS membership rights, election rules, governance, and legal disputes.</li>
+              <li><strong>Credit & Crop Loans:</strong> Kisan Credit Card (KCC) loan protection, interest subsidies, and rural credit.</li>
+              <li><strong>3,400+ Government Schemes:</strong> Subsidies, welfare programs, scholarships, toolkits, and grants.</li>
+            </ul>
+            <p style="margin-top: 10px; font-size: var(--font-size-sm); color: var(--text-muted);">
+              <em>Touch any of the service cards above, type your question, or tap the large terracotta microphone below to speak.</em>
+            </p>
+          </div>
+          <div class="row-meta">
+            <span>Official Advisory Channel &bull; Tahsil Hub</span>
+            <button class="row-audio-control" onclick="window.speakLedgerCard(this)" title="Read aloud">
+              <i class="ti ti-volume"></i> <span>Listen</span>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Input Control Hub (Voice + Text) -->
+      <div class="input-control-hub">
+        <form class="input-row" id="query-form" onsubmit="return false;">
+          <!-- Primary Voice Button (Terracotta #A3572E, min 48px target) -->
+          <button type="button" class="primary-mic-btn" id="voice-mic-btn" title="Tap to speak your query" aria-label="Start Voice Input">
+            <i class="ti ti-microphone" id="mic-icon"></i>
+          </button>
+
+          <!-- Text Input Field -->
+          <div class="text-input-wrapper">
+            <input type="text" id="user-input" class="query-text-input" placeholder="Speak or type your question (e.g. crop loss, PACS dispute, PMFBY, KCC loan)..." autocomplete="off">
+            <button type="submit" class="send-query-btn" id="send-btn" title="Submit query" aria-label="Send query">
+              <i class="ti ti-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="voice-status-bar">
+          <div class="voice-indicator">
+            <span class="live-dot" id="live-dot"></span>
+            <span id="voice-status-text">Microphone ready &bull; Tap button to speak in selected language</span>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--text-muted);" id="active-lang-indicator">Active Language: English (India)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scheme Directory Modal / Drawer -->
+  <div class="modal-overlay" id="schemes-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <i class="ti ti-folder-search" style="font-size: 1.4rem; color: var(--brass-light);"></i>
+          <h2 class="modal-title" id="modal-title">Government Schemes Directory (3,400+ Records)</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close directory">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="scheme-search-box" class="scheme-search-input" placeholder="Search by scheme name, state, category, subsidy, or keyword (e.g. PMFBY, fertilizer, tractor, loan)...">
+        <div class="schemes-list-grid" id="schemes-results-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform Footer -->
+  <footer class="platform-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <strong>Sahakaar Sathi VANI Platform</strong>
+        <span>Ministry of Cooperation &bull; National Council for Cooperative Training (NCCT) &bull; Government of India</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://cooperation.gov.in" target="_blank" rel="noopener">Ministry of Cooperation</a>
+        <a href="https://pmfby.gov.in" target="_blank" rel="noopener">PMFBY Portal</a>
+        <a href="https://myscheme.gov.in" target="_blank" rel="noopener">myScheme Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
