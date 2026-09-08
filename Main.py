@@ -28,6 +28,12 @@ import torch
 import numpy as np
 import pandas as pd
 
+if hasattr(torch, "set_num_threads"):
+    try:
+        torch.set_num_threads(os.cpu_count() or 8)
+    except Exception:
+        pass
+
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 
@@ -546,9 +552,10 @@ def _build_index():
     print(f"[Index] Building index from {CSV_PATH} ...")
     chunks = _load_and_chunk_schemes(CSV_PATH)
     texts = [c["text"] for c in chunks]
+    embed_texts = [c["text"][:280] for c in chunks]
 
     print(f"[Index] Embedding {len(chunks)} chunks ...")
-    vectors = embed(texts, batch_size=64)
+    vectors = embed(embed_texts, batch_size=128)
 
     # Setup Qdrant
     qdrant = _get_qdrant()
